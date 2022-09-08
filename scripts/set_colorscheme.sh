@@ -36,7 +36,9 @@ elif [ -x "$(whereis vim | awk '{print $2}')" ]; then
 fi
 
 # change the variable in bashrc
-$VIM_BIN -u "$GIT_PATH/linux-setup/submodules/profile_manager/epigen/epigen.vimrc" $HEADLESS -E -s -c "%g/.*PROFILES.*COLORSCHEME.*/norm ^/COLORSCHEMEciwCOLORSCHEME_$COLOR_SCHEME" -c "wqa" -- "$RCFILE"
+# https://stackoverflow.com/questions/33531664/how-to-replace-all-word-containing-a-pattern-in-vim
+$VIM_BIN -u "$GIT_PATH/linux-setup/submodules/profile_manager/epigen/epigen.vimrc" $HEADLESS -E -s \
+  -c "%g/.*PROFILES.*COLORSCHEME.*/.s/\<\w*COLORSCHEME\w*\>/COLORSCHEME_${COLOR_SCHEME}/" -c "wqa" -- "$RCFILE"
 
 source $RCFILE
 
