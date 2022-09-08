@@ -119,7 +119,7 @@ fi
 bash $APPCONFIG_PATH/silver_searcher/install.sh $subinstall_params
 
 # setup modified keyboard rules
-! $docker && bash $APPCONFIG_PATH/keyboard/install.sh $subinstall_params
+# ! $docker && bash $APPCONFIG_PATH/keyboard/install.sh $subinstall_params
 
 # setup fuzzyfinder
 bash $APPCONFIG_PATH/fzf/install.sh $subinstall_params
