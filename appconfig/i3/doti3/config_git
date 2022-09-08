@@ -17,6 +17,20 @@ set $workspace10 "10"
 
 # #{ override the default $workspace names and icos by custom settings
 
+# EPIGEN_ADD_BLOCK_LMARK {
+# set $workspace1 "1"
+# set $workspace2 "2"
+# set $workspace3 "3"
+# set $workspace4 "4"
+# set $workspace5 "5"
+# set $workspace6 "6"
+# set $workspace7 "7"
+# set $workspace8 "8"
+# set $workspace9 "9"
+# set $workspace10 "10"
+# EPIGEN_ADD_BLOCK_LMARK }
+
+
 # EPIGEN_ADD_BLOCK_VOJTA {
 # set $workspace1 "1: "
 # set $workspace2 "2: "
@@ -216,9 +230,9 @@ bindsym $mod2+f exec "~/.i3/detacher.sh 'cd $GIT_PATH/linux-setup/scripts; ./sys
 # EPIGEN_DEL_BLOCK_HONZA }
 
 # rofi launcher
-# EPIGEN_DEL_BLOCK_PETR EPIGEN_DEL_BLOCK_DANIEL {
+# EPIGEN_DEL_BLOCK_PETR EPIGEN_DEL_BLOCK_DANIEL EPIGEN_DEL_BLOCK_LMARK {
 bindsym $mod+d exec "rofi -combi-modi drun,run -show combi -opacity '85' -width 100 -padding 200 -font 'Monospace 18' -lines 10 -eh 1"
-# EPIGEN_DEL_BLOCK_PETR EPIGEN_DEL_BLOCK_DANIEL }
+# EPIGEN_DEL_BLOCK_PETR EPIGEN_DEL_BLOCK_DANIEL EPIGEN_DEL_BLOCK_LMARK }
 
 # default key bindings for audio on external keyboard
 # EPIGEN_DEL_BLOCK_TOMAS EPIGEN_DEL_BLOCK_AFZAL EPIGEN_DEL_BLOCK_DANIEL {
@@ -531,6 +545,18 @@ set $mode_gaps_inner inner gaps
 # #}
 
 # #}
+
+# EPIGEN_ADD_BLOCK_LMARK {
+
+# # smol rofi
+# bindsym $mod+Shift+d exec "rofi -combi-modi drun,run -show combi -opacity '85' -width 50 -padding 50 -font 'Monospace 15' -lines 10 -eh 1"
+
+# # Legion volume buttons
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# EPIGEN_ADD_BLOCK_LMARK }
 
 # #{ TOMAS's customization
 
