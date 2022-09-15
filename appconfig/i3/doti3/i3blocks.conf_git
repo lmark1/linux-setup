@@ -38,7 +38,7 @@ markup=none
 
 # EPIGEN_ADD_BLOCK_VOJTA EPIGEN_ADD_BLOCK_TOMAS }
 
-# EPIGEN_DEL_BLOCK_GPD {
+# EPIGEN_DEL_BLOCK_GPD EPIGEN_DEL_BLOCK_LMARK {
 
 [1]
 command=ping -c 1 192.168.69.101 >> /dev/null && echo 'uav1' || echo ""
@@ -215,8 +215,19 @@ color=#ffffff # EPIGEN_DEL_LINE_COLORSCHEME_LIGHT
 interval=10
 separator=true
 
-# EPIGEN_DEL_BLOCK_GPD }
+# EPIGEN_DEL_BLOCK_GPD EPIGEN_DEL_BLOCK_LMARK }
 
+# EPIGEN_ADD_BLOCK_LMARK {
+
+# [hawk2]
+# command=ping -c 1 192.168.1.52 >> /dev/null && echo 'hawk2' || echo ""
+# # color=#000000 # EPIGEN_ADD_LINE_COLORSCHEME_LIGHT
+# color=#ffffff # EPIGEN_DEL_LINE_COLORSCHEME_LIGHT
+# interval=5
+# separator=true
+
+# EPIGEN_ADD_BLOCK_LMARK }
+#
 # EPIGEN_ADD_BLOCK_DAN EPIGEN_ADD_BLOCK_TOMAS {
 
 # [alfa]

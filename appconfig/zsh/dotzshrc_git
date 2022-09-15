@@ -56,14 +56,22 @@ fi
 # Vi mode in ZSH
 bindkey -v
 
-# I dont like shared history between terminals, does not play well with tmux
-unsetopt share_history
+# EPIGEN_DEL_BLOCK_LMARK {
+# # I dont like shared history between terminals, does not play well with tmux
+# unsetopt share_history
+# EPIGEN_DEL_BLOCK_LMARK }
 
 # use the vi navigation keys in menu completion
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
+
+# EPIGEN_ADD_BLOCK_LMARK {
+# bindkey '^P' history-substring-search-up
+# bindkey '^N' history-substring-search-down
+# bindkey '^ ' autosuggest-accept
+# EPIGEN_ADD_BLOCK_LMARK }
 
 # source the mutual additions for all shells
 source "$REPO_PATH/appconfig/shell/commons.sh"
