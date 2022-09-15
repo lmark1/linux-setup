@@ -238,8 +238,12 @@ def GetCompilationInfoForHeaderSameDir(headerfile, database):
     for extension in SOURCE_EXTENSIONS:
         replacement_file = filename_no_ext + extension
         if os.path.exists(replacement_file):
-            compilation_info = database.GetCompilationInfoForFile(
-                replacement_file)
+            try:
+                compilation_info = database.GetCompilationInfoForFile(
+                    replacement_file)
+            except:
+                return GetCompilationInfoForFile(replacement_file, database)
+
             if compilation_info.compiler_flags_:
                 return compilation_info
     return None
@@ -276,9 +280,13 @@ def GetCompilationInfoForHeaderRos(headerfile, database):
                         for line in fh:
                             if pattern.match(line):
                                 file.write(" YES\n\n")
-                                file.write("getting info for file: {}".format(path + os.path.sep + src_filename))
-                                compilation_info = GetCompilationInfoForFile(path + os.path.sep + src_filename, database)
-                                return compilation_info
+                                replacement_file = path + os.path.sep + src_filename
+                                try:
+                                    compilation_info = database.GetCompilationInfoForFile(replacement_file)
+                                except:
+                                    return GetCompilationInfoForFile(replacement_file, database)
+                                if compilation_info.compiler_flags_:
+                                    return compilation_info
                         file.write("\n")
             # where reaching here, we have not find a c file to the header, lets use any in the package, that uses ros
             file.write("didnt find suitable C file to the header, searching for some ROS c file\n\n")
@@ -292,8 +300,12 @@ def GetCompilationInfoForHeaderRos(headerfile, database):
                         for line in fh:
                             if ros_include_pattern.match(line):
                                 file.write(" YES (ROS)\n\n")
-                                compilation_info = database.GetCompilationInfoForFile(
-                                    path + os.path.sep + src_filename)
+                                my_filename = path + os.path.sep + src_filename
+                                try:
+                                    compilation_info = database.GetCompilationInfoForFile(
+                                        my_filename)
+                                except:
+                                    return GetCompilationInfoForFile(my_filename, database)
                                 if compilation_info.compiler_flags_:
                                     return compilation_info
                 # if hdr_basename_no_ext != src_basename_no_ext:
@@ -332,7 +344,12 @@ def GetCompilationInfoForFile(filename, database):
 
 def Settings(**kwargs):
     filename = kwargs['filename']
-    database = GetDatabase(GetCompilationDatabaseFolder(filename))
+    dbase_folder = GetCompilationDatabaseFolder(filename)
+    if not dbase_folder:
+        #TODO(lmark) maybe put an alternativ db folder here
+        # dbase_folder = "/home/lmark/Workspace/uav_ws/src/uav_ros_simulation_modules/ardupilot/build/sitl"
+        pass
+    database = GetDatabase(dbase_folder)
     if database:
         # Bear in mind that compilation_info.compiler_flags_ does NOT return a
         # python list, but a "list-like" StringVec object
@@ -354,7 +371,7 @@ def Settings(**kwargs):
     }
 
 if __name__ == '__main__':
-    fname = "~/mrs_workspace/src/uav_core/ros_packages/mrs_msgs/src/main.cpp"
+    fname = "hello_world.cpp"
     if len(sys.argv) > 1:
         fname = sys.argv[1]
     print(Settings(filename = fname))
