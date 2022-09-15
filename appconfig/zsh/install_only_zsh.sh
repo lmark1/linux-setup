@@ -46,6 +46,10 @@ while true; do
       ln -sf $APP_PATH/../../submodules/zsh-syntax-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
     fi
 
+    if [ ! -e $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
+      ln -sf $APP_PATH/../../submodules/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+    fi
+
     # add k plugin for zsh
     $APP_PATH/install_k_plugin.sh
 

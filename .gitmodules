@@ -97,3 +97,6 @@
 [submodule "submodules/pdfpc"]
 	path = submodules/pdfpc
 	url = https://github.com/pdfpc/pdfpc.git
+[submodule "submodules/zsh-autosuggestions"]
+	path = submodules/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
