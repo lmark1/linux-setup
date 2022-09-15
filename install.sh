@@ -85,7 +85,7 @@ bash $APPCONFIG_PATH/htop-vim/install.sh $subinstall_params
 # bash $APPCONFIG_PATH/nvim/install.sh $subinstall_params
 
 # install ZSH with ATHAME
-! $docker && bash $APPCONFIG_PATH/zsh/install.sh $subinstall_params
+! $docker && bash $APPCONFIG_PATH/zsh/install_only_zsh.sh $subinstall_params
 
 # install I3
 ! $docker && bash $APPCONFIG_PATH/i3/install.sh $subinstall_params
