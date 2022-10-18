@@ -166,8 +166,10 @@ bindsym Mod1+Tab focus right
 bindsym $mod+braceright split h
 bindsym $mod+braceleft split v
 
-# enter fullscreen mode for the focused container
+# EPIGEN_ADD_BLOCK_LMARK {
+# # enter fullscreen mode for the focused container
 # bindsym $mod+f fullscreen
+# EPIGEN_ADD_BLOCK_LMARK }
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -579,6 +581,9 @@ set $mode_gaps_inner inner gaps
 #  # Move spotify to its own workspace
 #  for_window [class="Spotify"] move workspace $workspace10
 
+#  # Switching keyboards
+#  exec_always --no-startup-id setxkbmap -layout us,hr -option "grp:win_space_toggle"
+
 # EPIGEN_ADD_BLOCK_LMARK }
 
 # #{ TOMAS's customization
@@ -964,7 +969,7 @@ set $mode_gaps_inner inner gaps
 # # EPIGEN_ADD_BLOCK_COLORSCHEME_DARK {
 # # bindsym $mod+d exec "rofi -combi-modi drun,run -show combi -color-window '#BD222222, #0053B5FF, #FF777777' -color-normal '#00333333, #FFFFFFFF, #00383838, #BD53B5FF' -width 100 -padding '230' -font 'Monospace 18' -lines 7 -eh 1 -line-padding 5 -line-margin 2 -separator-style 'solid'"
 # # EPIGEN_ADD_BLOCK_COLORSCHEME_DARK }
-# # EPIGEN_ADD_BLOCK_COLORSCHEME_LIGHT {
+# # EPIGEN_ADD_BLOCK_COLORSCHEEPIGEN_ADD_BLOCK_PETRME_LIGHT {
 # # bindsym $mod+d exec "rofi -combi-modi drun,run -show combi -color-window '#FFFFFFFF, #FFAAAAAA, #FF000000' -color-normal '#FFEEEEEE, #FF000000, #FFFFFFFF, #FF454545' -width 100 -padding '230' -font 'Monospace 18' -lines 7 -eh 1 -line-padding 5 -line-margin 2 -separator-style 'solid'"
 # # EPIGEN_ADD_BLOCK_COLORSCHEME_LIGHT }
 
@@ -1380,7 +1385,9 @@ exec --no-startup-id nm-applet
 exec ~/.monitor.sh
 
 # enables transparency
-exec --no-startup-id compton -f -D 3 --backend glx --paint-on-overlay --vsync opengl-swc # EPIGEN_DEL_LINE_GPD EPIGEN_DEL_LINE_TOSHIBA EPIGEN_DEL_LINE_PETR EPIGEN_DEL_LINE_PAVEL EPIGEN_DEL_LINE_HONZA EPIGEN_DEL_LINE_DANIEL
+exec --no-startup-id compton -f -D 3 --backend glx --paint-on-overlay --vsync opengl-swc # EPIGEN_DEL_LINE_GPD EPIGEN_DEL_LINE_TOSHIBA EPIGEN_DEL_LINE_PETR EPIGEN_DEL_LINE_PAVEL EPIGEN_DEL_LINE_HONZA EPIGEN_DEL_LINE_DANIEL EPIGEN_DEL_LINE_LMARK
+
+# exec compton --config ~/git/linux-setup/appconfig/compton/fancy_blur.conf # EPIGEN_ADD_LINE_LMARK
 
 # sound-card control
 exec_always --no-startup-id indicator-sound-switcher
