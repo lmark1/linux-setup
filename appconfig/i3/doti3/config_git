@@ -280,7 +280,7 @@ bindsym $mod+Shift+minus move scratchpad
 for_window [title="pdfpc"] border none floating enable
 
 # bluetooth applet
-# exec --no-startup-id blueman-applet # EPIGEN_DEL_LINE_PETR 
+# exec --no-startup-id blueman-applet # EPIGEN_DEL_LINE_PETR EPIGEN_ADD_LINE_LMARK
 
 # EPIGEN_ADD_BLOCK_TOMAS EPIGEN_ADD_BLOCK_DAN EPIGEN_ADD_BLOCK_MATEJ {
 # # # F1 will no longer activate help of any program
