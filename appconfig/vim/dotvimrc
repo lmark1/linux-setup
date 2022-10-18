@@ -190,6 +190,12 @@ if g:user_mode == "1"
   " let g:clamp_libclang_file = '/usr/lib/x86_64-linux-gnu/libclang-3.9.so.1'
   " Plug 'justinmk/vim-syntax-extra'
 
+  " EPIGEN_ADD_BLOCK_LMARK {
+  " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  " Plug 'junegunn/fzf.vim'
+  " source ~/.vim/pluginconfig/fzf.vim
+  " EPIGEN_ADD_BLOCK_LMARK }
+
   " Thesaurus synonyms integration
   " <leader>cs
   Plug 'ron89/thesaurus_query.vim'

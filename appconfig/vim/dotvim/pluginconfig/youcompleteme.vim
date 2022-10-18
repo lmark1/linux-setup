@@ -52,7 +52,7 @@ inoremap <expr> k ((pumvisible() && !empty(v:completed_item))?("\<C-p>"):("k"))
 inoremap <expr> <C-k> ((pumvisible() && !empty(v:completed_item))?("\<C-p>"):("\<C-k>"))
 
 let g:ycm_filepath_completion_use_working_dir = 1
-let g:ycm_global_ycm_extra_conf = '~/.vim/default_ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_extra_conf_globlist = ['~/'.$ROS_WORKSPACE.'/*']
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_collect_identifiers_from_tags_files = 1 "default 0
@@ -83,7 +83,7 @@ function! YcmLocationList()
 endfunction
 nnoremap <leader>yll :call YcmLocationList()<cr>
 
-let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
@@ -91,4 +91,3 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<cr> :lop<cr>
 
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
-nnoremap <leader>fix :YcmCompleter FixIt<CR>
