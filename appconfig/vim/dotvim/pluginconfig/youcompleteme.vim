@@ -88,6 +88,6 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
 nnoremap <F5> :YcmForceCompileAndDiagnostics<cr> :lop<cr>
-
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
-
+nnoremap <leader>ji :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>fix :YcmCompleter FixIt<CR>
