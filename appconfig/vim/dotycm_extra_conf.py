@@ -347,7 +347,7 @@ def Settings(**kwargs):
     dbase_folder = GetCompilationDatabaseFolder(filename)
     if not dbase_folder:
         #TODO(lmark) maybe put an alternativ db folder here
-        # dbase_folder = "/home/lmark/Workspace/uav_ws/src/uav_ros_simulation_modules/ardupilot/build/sitl"
+        dbase_folder = "/home/lmark/Workspace/uav_ws/src/uav_ros_simulation/firmware/ardupilot/build/sitl"
         pass
     database = GetDatabase(dbase_folder)
     if database:
