@@ -219,6 +219,41 @@ separator=true
 
 # EPIGEN_ADD_BLOCK_LMARK {
 
+# [danieli1]
+# command=ping -c 1 192.168.1.61 >> /dev/null && echo 'danieli1' || echo ""
+# # color=#000000 # EPIGEN_ADD_LINE_COLORSCHEME_LIGHT
+# color=#ffffff # EPIGEN_DEL_LINE_COLORSCHEME_LIGHT
+# interval=5
+# separator=true
+
+# [duckpink]
+# command=ping -c 1 192.168.1.80 >> /dev/null && echo 'duckpink' || echo ""
+# # color=#000000 # EPIGEN_ADD_LINE_COLORSCHEME_LIGHT
+# color=#ffffff # EPIGEN_DEL_LINE_COLORSCHEME_LIGHT
+# interval=5
+# separator=true
+
+# [duckorange]
+# command=ping -c 1 192.168.1.81 >> /dev/null && echo 'duckorange' || echo ""
+# # color=#000000 # EPIGEN_ADD_LINE_COLORSCHEME_LIGHT
+# color=#ffffff # EPIGEN_DEL_LINE_COLORSCHEME_LIGHT
+# interval=5
+# separator=true
+
+# [falconblack]
+# command=ping -c 1 192.168.1.91 >> /dev/null && echo 'falconblack' || echo ""
+# # color=#000000 # EPIGEN_ADD_LINE_COLORSCHEME_LIGHT
+# color=#ffffff # EPIGEN_DEL_LINE_COLORSCHEME_LIGHT
+# interval=5
+# separator=true
+
+# [falconsilver]
+# command=ping -c 1 192.168.1.90 >> /dev/null && echo 'falconsilver' || echo ""
+# # color=#000000 # EPIGEN_ADD_LINE_COLORSCHEME_LIGHT
+# color=#ffffff # EPIGEN_DEL_LINE_COLORSCHEME_LIGHT
+# interval=5
+# separator=true
+
 # [hawk2]
 # command=ping -c 1 192.168.1.52 >> /dev/null && echo 'hawk2' || echo ""
 # # color=#000000 # EPIGEN_ADD_LINE_COLORSCHEME_LIGHT
@@ -228,6 +263,20 @@ separator=true
 
 # [eagleyellow]
 # command=ping -c 1 192.168.1.41 >> /dev/null && echo 'eagleyellow' || echo ""
+# # color=#000000 # EPIGEN_ADD_LINE_COLORSCHEME_LIGHT
+# color=#ffffff # EPIGEN_DEL_LINE_COLORSCHEME_LIGHT
+# interval=5
+# separator=true
+
+# [eagleblue]
+# command=ping -c 1 192.168.1.42 >> /dev/null && echo 'eagleblue' || echo ""
+# # color=#000000 # EPIGEN_ADD_LINE_COLORSCHEME_LIGHT
+# color=#ffffff # EPIGEN_DEL_LINE_COLORSCHEME_LIGHT
+# interval=5
+# separator=true
+
+# [broli]
+# command=ping -c 1 192.168.1.144 >> /dev/null && echo 'broli' || echo ""
 # # color=#000000 # EPIGEN_ADD_LINE_COLORSCHEME_LIGHT
 # color=#ffffff # EPIGEN_DEL_LINE_COLORSCHEME_LIGHT
 # interval=5
