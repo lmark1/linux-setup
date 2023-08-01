@@ -1205,6 +1205,11 @@ set $mode_gaps_inner inner gaps
 # exec "setxkbmap -option 'grp:alt_caps_toggle'"
 # EPIGEN_ADD_BLOCK_LANGUAGE }
 
+# EPIGEN_ADD_BLOCK_LMARK {
+# exec "setxkbmap -layout us,hr"
+# exec "setxkbmap -option 'grp:win_space_toggle'"
+# EPIGEN_ADD_BLOCK_LMARK }
+
 # #}
 
 # #{ SPOTIFY customization

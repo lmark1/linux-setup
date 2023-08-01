@@ -270,6 +270,8 @@ Plug 'tpope/vim-surround'
 " cx{motion} and later cx{motion} swaps the two places
 Plug 'tommcdo/vim-exchange'
 
+Plug 'rust-lang/rust.vim'
+
 call plug#end()
 
 set clipboard=unnamedplus     " shared clipboard with the system
@@ -337,6 +339,16 @@ function! TogglePaste()
   endif
 endfunc
 nnoremap <leader>p :call TogglePaste()<cr>
+" EPIGEN_ADD_BLOCK_LMARK {
+" " Paste keybinds
+" " delete without yanking
+" nnoremap <leader>d "_d
+" vnoremap <leader>d "_d
+" 
+" " replace currently selected text with default register
+" " without yanking it
+" vnoremap <leader>p "_dP
+" EPIGEN_ADD_BLOCK_LMARK }
 
 " default values for cursorlin and cursorcolumn
 set nocursorline
