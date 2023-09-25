@@ -340,14 +340,14 @@ function! TogglePaste()
 endfunc
 nnoremap <leader>p :call TogglePaste()<cr>
 " EPIGEN_ADD_BLOCK_LMARK {
-" " Paste keybinds
-" " delete without yanking
-" nnoremap <leader>d "_d
-" vnoremap <leader>d "_d
-" 
-" " replace currently selected text with default register
-" " without yanking it
-" vnoremap <leader>p "_dP
+ " " Paste keybinds
+ " " delete without yanking
+ " nnoremap <leader>d "_d
+ " vnoremap <leader>d "_d
+ 
+ " " replace currently selected text with default register
+ " " without yanking it
+ " vnoremap <leader>p "_dP
 " EPIGEN_ADD_BLOCK_LMARK }
 
 " default values for cursorlin and cursorcolumn
