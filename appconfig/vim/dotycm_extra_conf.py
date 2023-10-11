@@ -349,7 +349,12 @@ def Settings(**kwargs):
         #TODO(lmark) maybe put an alternativ db folder here
         dbase_folder = "/home/lmark/Workspace/uav_ws/src/uav_ros_simulation/firmware/ardupilot/build/sitl"
         pass
-    database = GetDatabase(dbase_folder)
+    print("Compilation Database folder: ", dbase_folder)
+    database = None
+    try:
+        database = GetDatabase(dbase_folder)
+    except:
+        print("Database creation failed")
     if database:
         # Bear in mind that compilation_info.compiler_flags_ does NOT return a
         # python list, but a "list-like" StringVec object
