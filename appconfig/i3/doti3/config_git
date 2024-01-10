@@ -231,15 +231,9 @@ bindsym $mod2+f exec "~/.i3/detacher.sh 'cd $GIT_PATH/linux-setup/scripts; ./sys
 # EPIGEN_DEL_BLOCK_HONZA }
 
 # rofi launcher
-<<<<<<< HEAD
-# EPIGEN_DEL_BLOCK_PETR EPIGEN_DEL_BLOCK_DANIEL EPIGEN_DEL_BLOCK_LMARK {
+# EPIGEN_DEL_BLOCK_PETR EPIGEN_DEL_BLOCK_DANIEL EPIGEN_DEL_BLOCK_PAVEL EPIGEN_DEL_BLOCK_LMARK {
 bindsym $mod+d exec "rofi -combi-modi drun,run -show combi -opacity '85' -width 100 -padding 200 -font 'Monospace 18' -lines 10 -eh 1"
-# EPIGEN_DEL_BLOCK_PETR EPIGEN_DEL_BLOCK_DANIEL EPIGEN_DEL_BLOCK_LMARK }
-=======
-# EPIGEN_DEL_BLOCK_PETR EPIGEN_DEL_BLOCK_DANIEL EPIGEN_DEL_BLOCK_PAVEL {
-bindsym $mod+d exec "rofi -combi-modi drun,run -show combi -opacity '85' -width 100 -padding 200 -font 'Monospace 18' -lines 10 -eh 1"
-# EPIGEN_DEL_BLOCK_PETR EPIGEN_DEL_BLOCK_DANIEL EPIGEN_DEL_BLOCK_PAVEL }
->>>>>>> origin/master
+# EPIGEN_DEL_BLOCK_PETR EPIGEN_DEL_BLOCK_DANIEL EPIGEN_DEL_BLOCK_PAVEL EPIGEN_DEL_BLOCK_LMARK }
 
 # default key bindings for audio on external keyboard
 # EPIGEN_DEL_BLOCK_TOMAS EPIGEN_DEL_BLOCK_AFZAL EPIGEN_DEL_BLOCK_DANIEL {
