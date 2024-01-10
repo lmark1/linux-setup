@@ -4,7 +4,9 @@
 let g:ycm_key_list_select_completion   = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+let g:ycm_auto_hover=''
 
+nmap <leader>D <plug>(YCMHover)
 nmap <leader>yfw <Plug>(YCMFindSymbolInWorkspace)
 nmap <leader>yfw <Plug>(YCMFindSymbolInDocument)
 nmap <leader>yr :YcmCompleter RefactorRename i
@@ -12,7 +14,7 @@ nmap <leader>yr :YcmCompleter RefactorRename i
 let g:ycm_python_binary_path = '/usr/bin/python3'
 
 " enable YCM refactoring for C-style languages using clangd
-let g:ycm_clangd_args = ['-log=verbose', '-pretty', '--header-insertion=never']
+let g:ycm_clangd_args = ['--log=verbose', '--pretty', '--header-insertion=never', '--clang-tidy', '--background-index', '--cross-file-rename']
 " let g:ycm_clangd_args = ['-cross-file-rename']
 " Let clangd fully control code completion
 " let g:ycm_clangd_uses_ycmd_caching = 1
@@ -107,3 +109,5 @@ let g:ycm_semantic_triggers.tex=['re!\\[A-Za-z]+',
   \ 're!\\(include(only)?|input|subfile){[^}]*',
   \ 're!\\includepdf(\s*\[[^]]*\])?\s*\{[^}]*',
   \ 're!\\includestandalone(\s*\[[^]]*\])?\s*\{[^}]*']
+let g:ycm_auto_hover=''
+nmap <leader>D <plug>(YCMHover)

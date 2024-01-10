@@ -36,10 +36,21 @@ import rospkg
 import re
 
 ENV_WORKSPACES = 'ROS_WORKSPACES'
+ENV_ROS_VERSION = 'ROS_VERSION'
 
-def GetWorkspacePath(filename):
+def GetRosVersion():
+    ver_txt = []
+    if not ENV_ROS_VERSION in os.environ:
+        raise ValueError("The {} environmental variable is not set!".format(ENV_ROS_VERSION))
+    else:
+        ver_txt = os.environ[ENV_ROS_VERSION]
+    try:
+        return int(ver_txt)
+    except:
+        return ''
 
-    pkg_name = rospkg.get_package_name(filename)
+
+def GetWorkspacePath(pkg_name):
 
     if not pkg_name:
         return ''
@@ -171,12 +182,25 @@ def GetCompilationDatabaseFolder(filename):
     The compilation_commands.json for the given file is returned by getting
     the package the file belongs to.
     """
+
+    filename = os.path.abspath(os.path.expanduser(os.path.expandvars(filename)))
+
     pkg_name = rospkg.get_package_name(filename)
 
     if not pkg_name:
+        path = os.path.dirname(os.path.expanduser(filename))
+        ccs = os.path.join(path, "compile_commands.json")
+        if os.path.exists(ccs):
+            return path
+
+        path = os.path.join(path, "build")
+        ccs = os.path.join(path, "compile_commands.json")
+        if os.path.exists(ccs):
+            return path
+
         return ''
 
-    workspace_path = GetWorkspacePath(filename)
+    workspace_path = GetWorkspacePath(pkg_name)
 
     if not workspace_path:
         return ''
