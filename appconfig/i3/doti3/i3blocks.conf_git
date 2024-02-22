@@ -303,6 +303,13 @@ separator=true
 # interval=5
 # separator=true
 
+# [broli04-skydroid]
+# command=ping -c 1 192.168.144.108 >> /dev/null && echo 'broli04-skydroid' || echo ""
+# # color=#000000 # EPIGEN_ADD_LINE_COLORSCHEME_LIGHT
+# color=#ffffff # EPIGEN_DEL_LINE_COLORSCHEME_LIGHT
+# interval=5
+# separator=true
+
 # [tukan]
 # command=ping -c 1 192.168.1.70 >> /dev/null && echo 'tukan' || echo ""
 # # color=#000000 # EPIGEN_ADD_LINE_COLORSCHEME_LIGHT
