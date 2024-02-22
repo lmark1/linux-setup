@@ -724,3 +724,5 @@ nnoremap <leader>op :delmark a:norm ma*:%s//&_/g:norm `a:delmark a
 if !empty(glob("~/.my.vimrc"))
   source ~/.my.vimrc
 endif
+
+map <F9> :w <CR> :!g++ % -std=c++17 -o %< && ./%< <CR>
